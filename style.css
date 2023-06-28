@@ -16,10 +16,7 @@ body{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 100%;
     height: 29px;
-    
-  
-    
-
+   
 }
 
 
@@ -49,15 +46,15 @@ body{
     display: flex;
     flex-wrap: wrap;
     padding-left: 30px;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-right: 30px;
+    font-family: 'Inter var', sans-serif;
     
 
 }
 
 .card{
-  
-  margin: 20px;
+  margin: 25px;
   width: 409px;
   height: 455px;
   border-radius: 8px;
@@ -90,4 +87,7 @@ body{
 
 .card a{
     padding-left: 300px;
+    color: #3A4F9A;
+    text-decoration: none;
+    
 }
