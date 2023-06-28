@@ -1,0 +1,93 @@
+body{
+    background:#FFFF;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  
+}
+
+#header{
+    background: blue;
+    margin-top: -8px;
+    margin-left: -8px;
+    display: flex;
+    padding: 15px 79px;
+    background: #32325D;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 29px;
+    
+  
+    
+
+}
+
+
+#blogtext{
+    font-family: 'Inter var', sans-serif;
+    width: 66px;
+    height: 29px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    position: absolute;
+    left: 120px;
+    top: -8px;
+    color: #FFFF;    
+ 
+}
+
+#main-title{
+    color: #3A4F9A;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    padding-top: 80px;
+    padding-left: 60px;
+}
+
+#content{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    justify-content: space-between;
+    padding-right: 30px;
+    
+
+}
+
+.card{
+  
+  margin: 20px;
+  width: 409px;
+  height: 455px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+   
+}
+
+
+
+.card img {
+    width: 100%;
+    height: 55%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card h3{
+    padding-left: 20px;
+    color: #3A4F9A;
+   
+    
+}
+
+.card p {
+    padding: 0px 20px;
+    color: #575757;
+    
+}
+
+.card a{
+    padding-left: 300px;
+}
