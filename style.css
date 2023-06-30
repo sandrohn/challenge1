@@ -5,26 +5,35 @@ body{
     overflow-x: hidden;
    
 }
+::-webkit-scrollbar {
+    width: 13px;
+    height: 637px;
+    border-radius: 4px;
+}
 
+::-webkit-scrollbar-track{
+    background: #FFFF;
+}
+::-webkit-scrollbar-thumb{
+    background: rgba(58, 79, 154, 0.3);
+    border-radius: 4px;   
+}
 #header{
     margin-top: -23px;
     margin-left: -23px;
-    display: flex;
-    vertical-align: middle;
     padding: 15px 79px;
     background: #32325D;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 100%;
     height: 30px;
     position: fixed;
+
    
 }
-
 .header-detail-pag{
     margin-top: -10px;
     margin-left: -10px;
     display: flex;
-    text-align: right;
     padding: 15px 79px;
     background: #32325D;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -32,14 +41,12 @@ body{
     height: 30px;
     position: fixed;
     z-index: 3;
-
 }
 
 .header-detail-pag img{
     position: relative;
     left: -13px;
 }
-
 .header-detail-pag h3{
     position: absolute;
     left: 107px;
@@ -50,11 +57,8 @@ body{
     height: 29px;
     font-weight: 600;
     font-size: 24px;
-    line-height: 29px;    
-    
+    line-height: 29px;      
 }
-
-
 #blogtext{
     font-family: 'Inter var', sans-serif;
     width: 66px;
@@ -66,9 +70,7 @@ body{
     left: 120px;
     top: -8px;
     color: #FFFF;    
- 
 }
-
 #main-title{
     color: #3A4F9A;
     text-decoration: underline;
@@ -76,16 +78,11 @@ body{
     padding-top: 150px;
     padding-left: 60px;
 }
-
-#content{
+.content{
     display: flex;
     flex-wrap: wrap;
-    padding-left: 30px;
     justify-content: space-evenly;
-    padding-right: 30px;
     font-family: 'Inter var', sans-serif;
-    
-
 }
 
 .card{
@@ -94,44 +91,31 @@ body{
   height: 455px;
   border-radius: 8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  
-   
+  cursor: pointer;   
 }
-
-
-
 .card img {
     width: 100%;
     height: 55%;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
-
 .card h3{
     padding-left: 20px;
-    color: #3A4F9A;
-   
-    
+    color: #3A4F9A;   
 }
-
 .card p {
     padding: 0px 20px;
-    color: #575757;
-    
+    color: #575757;    
 }
-
 .card-click{
     text-decoration: none;
-
 }
 
-.expand{
+.card a{
     padding-left: 300px;
     color: #3A4F9A;
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
-
 .content-detail{
     display: flex;
     flex-direction: column;
@@ -143,13 +127,9 @@ body{
     margin-right: 100px; */
     position: relative;
     z-index: 1;
-    transform: translateX(30%);
-    margin-block: 20px 50px;
-    
-   
-    
+    transform: translateX(25%);
+    margin-block: 20px 50px;    
 }
-
 .back-button{
     height: 65px;
     width: 65px;
@@ -160,10 +140,8 @@ body{
     background-color: #32325D;
     cursor: pointer;
     position: relative;
-    z-index: 2;
-    
+    z-index: 2;    
 }
-
 .full-card{
     /* margin-right: 200px; */
     margin-top: -70px;
@@ -172,28 +150,22 @@ body{
     min-width: 500px;
     height: 600px;
     border-radius: 8px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);   
 }
-
 .full-card img{
     width: 100%;
     height: 55%;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
-
 .full-card h2{
     padding-left: 20px;
     color: #3A4F9A;
 }
-
 .full-card p{
     padding: 0px 20px;
     color: #575757; 
 }
-
 .comments{
     margin-right: 200px;
     margin-top: 30px;
