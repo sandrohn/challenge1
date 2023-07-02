@@ -123,8 +123,6 @@ body{
     padding-left: 30px;
     padding-right: 30px;
     font-family: 'Inter var', sans-serif;
-    /* margin-left: 50px;
-    margin-right: 100px; */
     position: relative;
     z-index: 1;
     transform: translateX(25%);
@@ -143,7 +141,6 @@ body{
     z-index: 2;    
 }
 .full-card{
-    /* margin-right: 200px; */
     margin-top: -70px;
     width: 100%;
     max-width: 800px;

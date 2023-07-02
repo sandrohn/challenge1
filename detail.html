@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.ts"></script>
+    <title>Blog</title>
+    <link rel="icon" href="./images/logomarca.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js" ></script>
+</head>
+<body>
+    <header class="header-detail-pag">
+         <div><img src="images/logomarca.svg" width="29px" height="29px"></div>
+         <h3>BLOG</h3>
+    </header>
+    <main>
+        <a href="index.html">
+            <button class="back-button">
+                <img src="./images/ArrowIcon.svg" alt="">
+            </button>
+        </a>
+        <div class="content">
+            <div id="cardList" class="content"></div>         
+        </div>
+    </main>
+    <main>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const cardId = urlParams.get("id");
+    
+            const card = cards.find((c) => c.id === parseInt(cardId));
+    
+            if (card) {
+              const post = document.createElement("div");
+              const image = document.createElement("img");
+              const title = document.createElement("h2");
+              const body = document.createElement("p");
+    
+              image.src = card.imageUrl;
+              title.innerText = card.title;
+              body.innerText = card.body;
+    
+              post.appendChild(image);
+              post.appendChild(title);
+              post.appendChild(body);
+    
+              const cardList = document.getElementById("cardList");
+              if (cardList) {
+                cardList.appendChild(post);
+              }
+
+              post.classList.add("card");
+            }
+        </script>
+    </main>
+</body>
+</html>

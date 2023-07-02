@@ -3,7 +3,6 @@ interface Card {
     title: string;
     imageUrl: string;
     body: string;
-    link: string
 }
 
 interface userComment {
@@ -18,45 +17,41 @@ const cards: Card[] = [
     id: 1,
     title: "Grand Theft Auto V",
     imageUrl: "./images/gta.png",
-    link: "./gta.html",
     body: "orem Ipsum is sorem Ipsum is simorem Ipsum is simorem Ipsum is simorem Ipsum is simimply dummy teorem Ipsum is simply dummy teorem Ipsum is simply dummy teorem Ipsum is simply dummy te...",
   },
   {
     id: 2,
     title: "Dark Souls III",
     imageUrl: "./images/ds3.jpg",
-    link: "./ds3.html",
     body: "orem Ipsum is simply dummy teorem Ipsum is simply dummy teorem Ipsum is simply dummy teorem Ipsum is simply dummy te",
   }, 
   {
     id: 3,
     title: "Elden Ring",
     imageUrl: "./images/elden.png",
-    link:"",
     body: "orem Ipsum is orem Ipsum is simply dummy teorem Ipsum is simply dummy tesimply dummy te",
   },  
   {
-    id: 3,
+    id: 4,
     title: "Stray",
     imageUrl: "./images/stray.jpg",
-    link:"",
     body: "orem Ipsum is orem Ipsum is simply dummy teorem Ipsum is simply dummy tesimply dummy te",
   }, 
   {
-    id: 3,
+    id: 5,
     title: "God of War",
     imageUrl: "./images/god.jpg",
-    link:"",
     body: "orem Ipsum is orem Ipsum is simply dummy teorem Ipsum is simply dummy tesimply dummy te",
   }, 
   {
-    id: 3,
+    id: 6,
     title: "Red Dead",
     imageUrl: "./images/rd2.jpg",
-    link:"",
     body: "orem Ipsum is orem Ipsum is simply dummy teorem Ipsum is simply dummy tesimply dummy te",
   }, 
+  
 ] 
+
 
 for (const card of cards) {
     const post = document.createElement("div");
@@ -73,11 +68,11 @@ for (const card of cards) {
     post.appendChild(body);
 
     post.addEventListener("click", () =>{
-        window.location.href=card.link
+        window.location.href= `detail.html?id=${card.id}`
     }
     )
     const expand = document.createElement("a");
-    expand.href=card.link;
+    expand.href="detail.html";
     expand.innerText = "Expand..."
     post.appendChild(expand);  
     
@@ -89,44 +84,21 @@ for (const card of cards) {
     post.classList.add("card");
   }
 
-  const userComments: userComment[]=[
-    {
-      id: 1,
-      postId: 1,
-      email: "user1.@gmail",
-      body: "sdsaddasd"
-    },
-    {
-      id: 2,
-      postId: 2,
-      email: "user2.@gmail",
-      body: "sdasasdasdd"
-    }
-  ]
 
-  const commentsContainer = document.getElementById("comments-container");
+  
 
-  if (commentsContainer) {
-    const comment = userComments[0];
-  
-    const commentElement = document.createElement("div");
-  
-    const idElement = document.createElement("p");
-    idElement.textContent = `ID: ${comment.id}`;
-  
-    const postIdElement = document.createElement("p");
-    postIdElement.textContent = `Post ID: ${comment.postId}`;
-  
-    const emailElement = document.createElement("p");
-    emailElement.textContent = `Email: ${comment.email}`;
-  
-    const bodyElement = document.createElement("p");
-    bodyElement.textContent = `Body: ${comment.body}`;
-  
-    commentElement.appendChild(idElement);
-    commentElement.appendChild(postIdElement);
-    commentElement.appendChild(emailElement);
-    commentElement.appendChild(bodyElement);
-  
-    commentsContainer.appendChild(commentElement);
-  }
+  // const userComments: userComment[]=[
+  //   {
+  //     id: 1,
+  //     postId: 1,
+  //     email: "user1.@gmail",
+  //     body: "sdsaddasd"
+  //   },
+  //   {
+  //     id: 2,
+  //     postId: 2,
+  //     email: "user2.@gmail",
+  //     body: "sdasasdasdd"
+  //   }
+  // ]
+
