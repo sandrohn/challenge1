@@ -67,7 +67,7 @@ body{
     font-size: 24px;
     line-height: 29px;
     position: absolute;
-    left: 120px;
+    left: 120px; 
     top: -8px;
     color: #FFFF;    
 }
@@ -116,20 +116,7 @@ body{
     color: #3A4F9A;
     text-decoration: none;   
 }
-.content-detail{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-family: 'Inter var', sans-serif;
-    /* margin-left: 50px;
-    margin-right: 100px; */
-    position: relative;
-    z-index: 1;
-    transform: translateX(25%);
-    margin-block: 20px 50px;    
-}
+
 .back-button{
     height: 65px;
     width: 65px;
@@ -143,7 +130,6 @@ body{
     z-index: 2;    
 }
 .full-card{
-    /* margin-right: 200px; */
     margin-top: -70px;
     width: 100%;
     max-width: 800px;
@@ -161,19 +147,49 @@ body{
 .full-card h2{
     padding-left: 20px;
     color: #3A4F9A;
+    margin-left: 20px;
 }
 .full-card p{
     padding: 0px 20px;
     color: #575757; 
+    margin: 0px 20px 0px ;
 }
 .comments{
-    margin-right: 200px;
     margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 100%;
-    max-width: 800px;
+    max-width: 760px;
     min-width: 500px;
     min-width: 300px;
-    height: 300px;
+    height: 500px;
     border-radius: 8px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);/  
+}
+
+.comments div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 0.5px solid #575757;
+}
+
+.comments p {
+    color: #575757;
+    margin: 0;
+    width: 80%;
+    word-wrap: break-word;
+      
+}
+
+.comments h5{
+    color: #3A4F9A;
+    margin-right: 10px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    
+}
+
+.comments h5::after{
+    content: ":";
 }

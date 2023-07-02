@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="icon" href="./images/logomarca.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js"></script>
+</head>
+<body>
+    <header class="header-detail-pag">
+         <div><img src="images/logomarca.svg" width="29px" height="29px"></div>
+         <h3>BLOG</h3>
+    </header>
+    <main>
+        <a href="index.html">
+            <button class="back-button">
+                <img src="./images/ArrowIcon.svg" alt="">
+            </button>
+        </a>
+    <div class="content">
+            <div id="cardList"></div>
+            <div id="commentSection" ></div>
+        </div>
+    </main>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const cardId = urlParams.get("id");
+
+        const card = cards.find((c) => c.id === parseInt(cardId));
+
+        if (card) {
+          const post = document.createElement("div");
+          const image = document.createElement("img");
+          const title = document.createElement("h2");
+          const body = document.createElement("p");
+
+          image.src = card.imageUrl;
+          title.innerText = card.title;
+          body.innerText = card.body;
+
+          post.appendChild(image);
+          post.appendChild(title);
+          post.appendChild(body);
+
+          const cardList = document.getElementById("cardList");
+          if (cardList) {
+            cardList.appendChild(post);
+          }
+
+          post.classList.add("full-card");
+
+          const cardComments = userComments.filter((comment) => comment.postId === card.id);
+
+          if (cardComments.length > 0) {
+            const commentSection = document.createElement("div");
+            const commentTitle = document.createElement("h4");
+            
+
+            commentSection.appendChild(commentTitle);
+
+            for (const comment of cardComments) {
+              const commentItem = document.createElement("div");
+              const commentEmail = document.createElement("h5");
+              const commentBody = document.createElement("p");
+              
+            const [username, domain] = comment.email.split("@");
+
+              commentEmail.innerText = `${username}: ${comment.email}`;
+              commentBody.innerText = comment.body;
+
+              commentBody.innerText = comment.body;
+
+              commentItem.appendChild(commentEmail);
+              commentItem.appendChild(commentBody);
+
+              commentItem.style.display = "flex"
+
+
+              commentSection.appendChild(commentItem);
+            }
+
+            cardList.appendChild(commentSection);
+            commentSection.classList.add("comments")
+
+          }
+          
+        }
+    </script>
+</body>
+</html>
