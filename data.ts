@@ -19,15 +19,8 @@ const cards: Card[] = [
     title: "Grand Theft Auto V",
     imageUrl: "./images/gta.png",
     preview: ".",
-    body: " THIS TEXT IS ABOUT GTA AND ONLY GTA, IT CANT BE IN ANY OTHER OF THOSE CARDS FOR GOD SAKE OH MY FUCKING GOD",
+    body: " The game's narrative revolves around three playable protagonists: Michael De Santa, a retired bank robber living under witness protection; Franklin Clinton, a street hustler looking for better opportunities; and Trevor Philips, a volatile and psychotic career criminal. The players can switch between these characters throughout the game, following their interconnected stories and completing missions.",
   },
-  {
-    id: 2,
-    title: "Dark Souls III",
-    imageUrl: "./images/ds3.jpg",
-    preview: "",
-    body: "THIS CARD IS ABOUT DARK SOULS 3 THIS FUCKING GAME IS AMAZING HOLY",
-  }, 
   {
     id: 3,
     title: "Elden Ring",
@@ -55,7 +48,14 @@ const cards: Card[] = [
     imageUrl: "./images/rd2.jpg",
     preview: "",
     body: "THIS TEXT IS ABOUT RD2! I NEVER PLAYED THIS GAME BUT I WANNA SO FUCKING MUCH! THIS GAME SEEMS AMAZING ALL TOUGHT I NEVER PLAYED. THE ENVIROMENT LOOKS MAGICAL",
-  }, 
+  },
+  {
+    id: 7,
+    title: "Dark Souls III",
+    imageUrl: "./images/ds3.jpg",
+    preview: "",
+    body: "THIS TEXT IS ABOUT RD2! I NEVER PLAYED THIS GAME BUT I WANNA SO FUCKING MUCH! THIS GAME SEEMS AMAZING ALL TOUGHT I NEVER PLAYED. THE ENVIROMENT LOOKS MAGICAL",
+  },
   
 ] 
 
@@ -95,27 +95,24 @@ for (const card of cards) {
     post.classList.add("card");
   }
 
-
-  
-
   const userComments: userComment[]=[
     {
       id: 1,
       postId: 1,
-      email: "GTA1.@gmail",
-      body: "sdsaddasd"
+      email: "inojosa@gmail",
+      body: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     {
       id: 2,
       postId: 1,
       email: "GTA2.@gmail",
-      body: "sdasasdasdd"
+      body: "omg this game amazingdasdasdasdasdasdadasdasdasd"
     },
     {
       id: 3,
       postId: 1,
       email: "GTA3.@gmail",
-      body: "sdasasdasdd"
+      body: "omg this game sucks"
     },
     {
       id: 4,
@@ -123,18 +120,7 @@ for (const card of cards) {
       email: "DARK1.@gmail",
       body: "sdasasdasdd"
     },  
-    {
-      id: 5,
-      postId: 2,
-      email: "DARK2.@gmail",
-      body: "sdasasdasdd"
-    },  
-    {
-      id: 6,
-      postId: 2,
-      email: "DARK3.@gmail",
-      body: "sdasasdasdd"
-    },
+    
     {
       id: 7,
       postId: 3,
@@ -187,6 +173,42 @@ for (const card of cards) {
       id: 15,
       postId: 5,
       email: "god3.@gmail",
+      body: "sdasasdasdd"
+    },
+    {
+      id: 16,
+      postId: 6,
+      email: "red1.@gmail",
+      body: "sdasasdasdd"
+    },
+    {
+      id: 17,
+      postId: 6,
+      email: "red2.@gmail",
+      body: "sdasasdasdd"
+    },
+    {
+      id: 18,
+      postId: 6,
+      email: "red3.@gmail",
+      body: "sdasasdasdd"
+    },
+    {
+      id: 19,
+      postId: 7,
+      email: "red3.@gmail",
+      body: "sdasasdasdd"
+    },
+    {
+      id: 20,
+      postId: 7,
+      email: "red3.@gmail",
+      body: "sdasasdasdd"
+    },
+    {
+      id: 21,
+      postId: 7,
+      email: "red3.@gmail",
       body: "sdasasdasdd"
     },
   ]

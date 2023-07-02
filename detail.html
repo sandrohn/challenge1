@@ -19,10 +19,10 @@
                 <img src="./images/ArrowIcon.svg" alt="">
             </button>
         </a>
-        <div class="content">
-            <div id="cardList" class="content"></div>         
+    <div class="content">
+            <div id="cardList"></div>
+            <div id="commentSection" ></div>
         </div>
-        <div id="commentSection" class="comments"  ></div>
     </main>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -56,25 +56,34 @@
           if (cardComments.length > 0) {
             const commentSection = document.createElement("div");
             const commentTitle = document.createElement("h4");
-            commentTitle.innerText = "Comments";
+            
 
             commentSection.appendChild(commentTitle);
 
             for (const comment of cardComments) {
               const commentItem = document.createElement("div");
-              const commentEmail = document.createElement("p");
+              const commentEmail = document.createElement("h5");
               const commentBody = document.createElement("p");
+              
+            const [username, domain] = comment.email.split("@");
 
-              commentEmail.innerText = `Email: ${comment.email}`;
+              commentEmail.innerText = `${username}: ${comment.email}`;
+              commentBody.innerText = comment.body;
+
               commentBody.innerText = comment.body;
 
               commentItem.appendChild(commentEmail);
               commentItem.appendChild(commentBody);
 
+              commentItem.style.display = "flex"
+
+
               commentSection.appendChild(commentItem);
             }
 
             cardList.appendChild(commentSection);
+            commentSection.classList.add("comments")
+
           }
           
         }
